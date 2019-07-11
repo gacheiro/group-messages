@@ -63,7 +63,7 @@ def main():
                 assert float(ts) - float(msg['ts']) <= TIME_WINDOW
 
         with open(f'output/{user}.json', 'w') as f:
-            json.dump(grouped_msgs, f)
+            json.dump(grouped_msgs, f, indent=4)
 
 
 if __name__ == '__main__':
